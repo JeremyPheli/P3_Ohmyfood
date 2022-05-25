@@ -93,7 +93,14 @@ h3::after {
 }
 
 .descriptionPlats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 14px;
+    margin: 0;
+}
+
+.textePlats {
     margin: 0;
 }
 
@@ -104,8 +111,6 @@ h4 {
 }
 
 .prix {
-    display: flex;
-    align-self: end;
     font-weight: 700;
 }
 
