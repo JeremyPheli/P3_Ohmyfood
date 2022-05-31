@@ -90,6 +90,74 @@ h3::after {
     border: none;
     box-shadow: 0.25rem 0.25rem 0.5rem #c7c7c7;
     border-radius: 0.75rem;
+    animation: itemAppear 1s;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.31, 0.84);
+    animation-fill-mode: both;
+    transform: scale(0);
+}
+
+@keyframes itemAppear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform : scale(1)
+    }
+}
+
+.delai0 {
+    animation-delay: 0s;
+}
+
+.delai1 {
+    animation-delay: 0.1s;
+}
+
+.delai2 {
+    animation-delay: 0.2s;
+}
+
+.delai3 {
+    animation-delay: 0.3s;
+}
+
+.delai4 {
+    animation-delay: 0.4s;
+}
+
+.delai5 {
+    animation-delay: 0.5s;
+}
+
+.delai6 {
+    animation-delay: 0.6s;
+}
+
+.delai7 {
+    animation-delay: 0.6s;
+}
+
+.delai8 {
+    animation-delay: 0.7s;
+}
+
+.delai9 {
+    animation-delay: 0.8s;
+}
+
+.platsConfirmation {
+    background-color: #99E2D0;
+    width: 4rem;
+    /* margin: -1rem -5rem -1rem 1rem; */
+    /* display:none; */
+    /* transition-duration: 0.5s; */
+    height: 100%;
+}
+
+.plats:hover {
+    cursor: pointer;
+    margin-right: -1rem;
 }
 
 .descriptionPlats {
