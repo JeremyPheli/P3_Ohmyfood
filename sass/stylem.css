@@ -83,7 +83,8 @@ h3::after {
 
 .plats {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
     padding: 1rem;
     margin: 1rem 0;
     background-color: white;
@@ -94,6 +95,7 @@ h3::after {
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.31, 0.84);
     animation-fill-mode: both;
     transform: scale(0);
+    cursor: pointer;
 }
 
 @keyframes itemAppear {
@@ -149,24 +151,30 @@ h3::after {
 .platsConfirmation {
     background-color: #99E2D0;
     width: 4rem;
-    /* margin: -1rem -5rem -1rem 1rem; */
-    /* display:none; */
-    /* transition-duration: 0.5s; */
-    height: 100%;
+    margin: -1rem -5rem -1rem 1rem;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.plats:hover {
+.plats:hover .platsConfirmation {
     cursor: pointer;
     margin-right: -1rem;
 }
 
 .descriptionPlats {
     display: flex;
+    flex-direction: column;
+}
+
+/* .descriptionPlats {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    margin: 0;
-}
+    margin: 0; */
+/* } */
 
 .textePlats {
     margin: 0;
@@ -178,8 +186,40 @@ h4 {
     width: 100%;
 }
 
+.prixDescription {
+    display: flex;
+}
+
+.validation {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 6s;
+}
+
+.iconValidation {
+    color: #99E2D0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .prix {
     font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 1rem;
+}
+
+.btnCommand {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 4rem 0;
 }
 
 .command {
@@ -193,12 +233,12 @@ h4 {
   font-weight: bold;
   text-align: center;
   font-size: 15px;
+  cursor: pointer;
 }
 
-.btnCommand {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0 4rem 0;
+.command:hover {
+    filter: brightness(1.10);
+    transform: scale(1.05);
 }
 
 /* -->FOOTER<-- */
