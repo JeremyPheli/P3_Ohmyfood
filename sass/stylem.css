@@ -166,19 +166,11 @@ h3::after {
 .descriptionPlats {
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* .descriptionPlats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin: 0; */
-/* } */
-
-.textePlats {
-    margin: 0;
-}
 
 h4 {
     margin: 0;
@@ -199,13 +191,17 @@ h4 {
     justify-content: center;
     border-radius: 100px;
     transform: rotate(180deg);
-    transition-duration: 6s;
+    transition-duration: 0.7s;
 }
 
 .iconValidation {
     color: #99E2D0;
     font-size: 18px;
     font-weight: bold;
+}
+
+.plats:hover .validation {
+    transform: rotate(0);
 }
 
 .prix {
@@ -239,6 +235,7 @@ h4 {
 .command:hover {
     filter: brightness(1.10);
     transform: scale(1.05);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
 }
 
 /* -->FOOTER<-- */
