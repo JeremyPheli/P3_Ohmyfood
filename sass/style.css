@@ -173,6 +173,8 @@ h1 {
   color: white;
   font-family: Roboto, sans-serif;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btnInfo:hover {

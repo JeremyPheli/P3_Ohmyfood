@@ -247,6 +247,7 @@ h4 {
   text-align: center;
   font-size: 15px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .command:hover {
