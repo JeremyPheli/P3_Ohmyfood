@@ -163,9 +163,8 @@ h3::after {
     margin-right: -1rem;
 }
 
-.descriptionPlats {
-    display: flex;
-    flex-direction: column;
+.descriptionPlats , h4 {
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

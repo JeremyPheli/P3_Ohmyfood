@@ -10,13 +10,10 @@ body {
 /* --> LOADING SPINNER <-- */
 
 .spin-wrapper{
-    // position: fixed;
-    width: 100%;
-    height: 100%;
+    position: fixed;
     z-index: 10000;
-    animation: loader 3s;
-    visibility: visible;
-    
+    background-color: hsla(0, 0%, 100%, .9);
+    animation: loader 4s;
   
     .spinner{
       position: fixed;
@@ -28,7 +25,8 @@ body {
       left: 50%;
       margin: -30px;
       border-radius: 50%;
-      animation: spin 6s;
+      animation: spin 2s;
+      animation-delay: 1s;
       animation-fill-mode: both;
     
       
@@ -45,7 +43,7 @@ body {
         left: -12px;
         right: -12px;
         bottom: -12px;
-        animation: spin 8s;
+        animation: spin 3s linear;
       }
       
       &:after{
@@ -54,25 +52,38 @@ body {
         left: 6px;
         right: 6px;
         bottom: 6px;  
-        animation: spin 7s;
+        animation: spin 3s linear;
       }
     }
   }
   
   @keyframes loader {
-    0%{background-color: hsla(0, 0%, 100%, .9);}
-    100%{ opacity:0;
-    visibility: hidden;
-    z-index: -1000;}
-}
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 99%;
+        }
+
+    70% {
+        opacity: 75%;
+        }
+
+    99% {
+        width: 100%;
+        height: 100%;
+        }
+    
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0%;
+        }
+  }
 
   @keyframes spin{
     0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);
-    visibility: hidden;}
+    100% {transform: rotate(360deg); visibility: hidden}
   }
-
-
 
 header {
     text-align: center;
@@ -251,6 +262,7 @@ h3 {
     font-size: 30px;
     right: 30px;
     bottom: 30px;
+    // mix-blend-mode: lighten;
 }
 
 .iconHeart:hover {

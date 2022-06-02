@@ -10,12 +10,11 @@ body {
 
 /* --> LOADING SPINNER <-- */
 .spin-wrapper {
-  width: 100%;
-  height: 100%;
+  position: fixed;
   z-index: 10000;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
-  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-animation: loader 4s;
+          animation: loader 4s;
 }
 
 .spin-wrapper .spinner {
@@ -28,8 +27,10 @@ body {
   left: 50%;
   margin: -30px;
   border-radius: 50%;
-  -webkit-animation: spin 6s;
-          animation: spin 6s;
+  -webkit-animation: spin 2s;
+          animation: spin 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -47,8 +48,8 @@ body {
   left: -12px;
   right: -12px;
   bottom: -12px;
-  -webkit-animation: spin 8s;
-          animation: spin 8s;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
 }
 
 .spin-wrapper .spinner:after {
@@ -57,29 +58,47 @@ body {
   left: 6px;
   right: 6px;
   bottom: 6px;
-  -webkit-animation: spin 7s;
-          animation: spin 7s;
+  -webkit-animation: spin 3s linear;
+          animation: spin 3s linear;
 }
 
 @-webkit-keyframes loader {
   0% {
-    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity: 99%;
+  }
+  70% {
+    opacity: 75%;
+  }
+  99% {
+    width: 100%;
+    height: 100%;
   }
   100% {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1000;
+    width: 0;
+    height: 0;
+    opacity: 0%;
   }
 }
 
 @keyframes loader {
   0% {
-    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity: 99%;
+  }
+  70% {
+    opacity: 75%;
+  }
+  99% {
+    width: 100%;
+    height: 100%;
   }
   100% {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1000;
+    width: 0;
+    height: 0;
+    opacity: 0%;
   }
 }
 
