@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+/* -->HEADER<-- */
+
+header {
+    padding: 10px;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-family: Shrikhand, sans-serif;
+    margin: 0;
+}
+
+.iconHeader {
+    font-size: 20px;
+    position: absolute;
+    left: 2rem;
+    top: 37%;
+    text-align: left;
+    color: black;
+}
+
+.imgTop {
+    width: 100%;
+    max-height: 32rem;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* -->MAIN<-- */
+
+h2 {
+    font-family: Shrikhand, sans-serif;
+}
+
+.headerMain {
+    padding: 5px 20px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.iconMain {
+    font-size: 30px;
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+    background-color:  transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.iconMain:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 0px;
+    transform: scale(1.2);
+
+}
+
+main {
+    background-color: #f6f6f6;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -4rem;
+    position: relative;  /* Permet d'ancrer la partie haute du main dans l'image */
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #99E2D0;
+    margin-top: 3px;
+}
+
+.conteneurMenu {
+    padding: 0 1rem;
+}
+
+.plats {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    border: none;
+    box-shadow: 0.25rem 0.25rem 0.5rem #c7c7c7;
+    border-radius: 0.75rem;
+    animation: itemAppear 1s;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.31, 0.84);
+    animation-fill-mode: both;
+    transform: scale(0);
+    cursor: pointer;
+}
+
+@keyframes itemAppear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform : scale(1)
+    }
+}
+
+.delai0 {
+    animation-delay: 0s;
+}
+
+.delai1 {
+    animation-delay: 0.1s;
+}
+
+.delai2 {
+    animation-delay: 0.2s;
+}
+
+.delai3 {
+    animation-delay: 0.3s;
+}
+
+.delai4 {
+    animation-delay: 0.4s;
+}
+
+.delai5 {
+    animation-delay: 0.5s;
+}
+
+.delai6 {
+    animation-delay: 0.6s;
+}
+
+.delai7 {
+    animation-delay: 0.6s;
+}
+
+.delai8 {
+    animation-delay: 0.7s;
+}
+
+.delai9 {
+    animation-delay: 0.8s;
+}
+
+.platsConfirmation {
+    background-color: #99E2D0;
+    width: 4rem;
+    margin: -1rem -5rem -1rem 1rem;
+    transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plats:hover .platsConfirmation {
+    cursor: pointer;
+    margin-right: -1rem;
+}
+
+.descriptionPlats , h4 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+h4 {
+    margin: 0;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.prixDescription {
+    display: flex;
+}
+
+.validation {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.7s;
+}
+
+.iconValidation {
+    color: #99E2D0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.plats:hover .validation {
+    transform: rotate(0);
+}
+
+.prix {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 1rem;
+}
+
+.btnCommand {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 4rem 0;
+}
+
+.command {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 50px;
+  padding: 15px 40px;
+  border: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.command:hover {
+    filter: brightness(1.10);
+    transform: scale(1.05);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+}
+
+/* -->FOOTER<-- */
+
+footer {
+    background: #3b3b3b;
+    color: white;
+    padding: 15px;
+  }
+  
+  .texteFooter {
+    list-style: none;
+    padding: 0 5px 0 5px;
+  }
+  
+  .logoFooter {
+    width: 40%;
+    color: white;
+    font-family: Shrikhand, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
+  
+  .iconFooter1 {
+    margin-right: 15px;
+  }
+  
+  .iconFooter2 {
+    margin-right: 10px;
+  }
+  
+  .footerLink {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+  }
+  
+  li {
+    margin-top: 7px;
+  }
