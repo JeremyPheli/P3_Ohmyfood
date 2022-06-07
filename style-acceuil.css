@@ -13,7 +13,7 @@ body {
 .spin-wrapper {
   position: fixed;
   z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 2.5);
   -webkit-animation: loader 4s;
   animation: loader 4s;
 }
@@ -72,7 +72,7 @@ body {
   }
 
   70% {
-    opacity: 75%;
+    opacity: 85%;
   }
 
   99% {
@@ -222,6 +222,7 @@ nav {
   counter-reset: compteListe;
 }
 
+
 h2 {
   margin-left: 15px;
 }
@@ -338,7 +339,7 @@ h3 {
   cursor: pointer;
 }
 
-.iconHeart:hover {
+.iconHeart:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
