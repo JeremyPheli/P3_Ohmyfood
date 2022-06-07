@@ -62,7 +62,7 @@ h2 {
     cursor: pointer;
 }
 
-.iconMain:hover {
+.iconMain:active {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
